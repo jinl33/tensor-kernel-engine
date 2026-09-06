@@ -14,4 +14,5 @@ module load python/3.10 cuda/12.1
 source ~/venv/bin/activate
 pip install triton torch torchvision
 
-python main.py --benchmark --dtype fp16 --output assets/kernel_perf_panel.png
+python main.py --benchmark --dtype fp16
+python main.py --visualize --output assets/kernel_perf_panel.png
