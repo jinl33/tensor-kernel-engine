@@ -1,0 +1,5 @@
+find_path(LIBTORCH_INCLUDE_DIR torch/torch.h HINTS $ENV{Torch_DIR} $ENV{LIBTORCH_ROOT})
+find_library(LIBTORCH_LIBRARY torch HINTS $ENV{Torch_DIR} $ENV{LIBTORCH_ROOT})
+include(FindPackageHandleStandardArgs)
+find_package_handle_standard_args(LibTorch DEFAULT_MSG LIBTORCH_INCLUDE_DIR LIBTORCH_LIBRARY)
+mark_as_advanced(LIBTORCH_INCLUDE_DIR LIBTORCH_LIBRARY)

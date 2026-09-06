@@ -1,0 +1,14 @@
+sequence_lengths: [512, 1024, 2048, 4096, 8192]
+dimensions: [64, 128, 256]
+dtypes: [fp16, bf16, fp32]
+attention:
+  block_m: 64
+  block_n: 64
+  num_warps: 4
+voxel:
+  grid_size: [128, 128, 32]
+  reduction: mean
+hardware:
+  name: RTX 4090
+  memory_bandwidth_gbps: 1008.0
+  fp16_tflops: 82.6
